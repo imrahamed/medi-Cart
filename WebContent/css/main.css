@@ -1,0 +1,561 @@
+@charset "ISO-8859-1";
+
+
+/* @media (min-width: 768px) { */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeecec !important;
+}
+
+/* Full-width input fields */
+.input-fields {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 0px;
+    border-style: inset;
+    border-radius: 10px;
+    box-shadow: 3px 2px lavender;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	width: 10%;
+	padding: 10px 18px;
+	background-color: #f44336;
+	border-radius: 5px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 16px;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 40%; /* Could be more or less, depending on screen size */
+	height: 60%;
+	border-radius: 10px;
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)
+}
+
+to {
+	-webkit-transform: scale(1)
+}
+
+}
+@keyframes animatezoom {
+	from {transform: scale(0)
+}
+
+to {
+	transform: scale(1)
+}
+
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+#buttons {
+	float: right;
+	background-color: red;
+	margin-bottom: 50px;
+}
+
+.row.content {
+	height: auto;
+}
+
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 10%;
+	background-color: grey;
+	text-align: center;
+    margin: auto;
+}
+.header-text {
+   /* margin-right: 400px;*/
+   margin-right:400px;
+}
+
+.slogan {
+	margin-left: 200px;
+	margin-top: 10px;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
+	background-color: grey;
+	color: white;
+	text-align: center;
+}
+
+#shadow {
+	border: 1px solid;
+	padding: 10px;
+	box-shadow: 5px 10px 18px red;
+}
+
+#rcorners {
+	border-radius: 3px;
+	background: #000000;
+	padding: 5px;
+	width: 200px;
+	height: 150px;
+}
+
+#style1 {
+	display: inline;
+}
+
+.container {
+	font-color: black;
+}
+
+.loginButton {
+	width: 50%;
+    margin-right: 0px;
+    border-radius: 10px;
+}
+.logo-icon {
+	height: 40px;
+    width: 40px;
+    margin-left: 11px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.list-table  {
+    margin-top: 20px;
+    border: solid 2px grey;
+}
+* {
+  box-sizing: border-box;
+}
+#myInput {
+    margin-top: 150px;
+    margin-bottom: 2%;
+}
+.attribute-values{
+    border-style: none;
+}
+.add-icon {
+	height:30px;
+}
+.logout {
+	float: right;
+    margin-right: 20px;
+    margin-top: -35px;
+    list-style-type: none;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  margin-left: 60px;
+  margin-top: 30px;
+  float: left;
+  text-align: center;
+}
+.card:hover {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+     box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+}
+.card-body {
+  padding: 2px 16px;
+}
+.add-to-cart {
+    height: 30px;
+    width:30px;
+    float:right;
+    margin-top: 0px;
+    cursor: pointer;
+}
+.medicine-icon {
+    height: 30px;
+    width:30px;
+    margin-top: 20px;
+}
+.medicine-name {
+    height:10px;
+    width:40px;
+    background-color: #000;
+    margin-left: 200px;
+}
+.cart {
+    height:auto;
+    width:500px;
+    background-color: lemonchiffon;
+    margin-top: 130px;
+    padding-bottom: 40px;
+}
+.myCart-icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+.myCart-title {
+    margin-top: -7%;
+}
+.product-container {
+    display: inline-block;
+    height: auto;
+    width: 1150px;
+    background-color: white;
+    padding: 30px;
+    /* margin-left: 315px;
+    margin-top: -694px; */
+    border-radius: 20px;
+}
+.search-container {
+    height:auto;
+    width: 335px;
+    background-color: #ffffff;
+    margin-top:90px;
+    border-radius: 20px;
+    float: left;
+    padding-bottom: 20px;
+}
+
+
+.myCart {
+    height: auto;
+    width: auto;
+}
+.logo-icon-index {
+    float: left;   
+    margin-top: 20px; 
+
+}
+.searchBox {
+    height: 35px;
+    width: 550px;
+    margin-top: 24px;
+    margin-right: 0px;
+    margin-left: -150px;
+}
+.searchButton {
+    height:35px;
+    width:100px;
+    background-color: black;
+    color: white;  
+}
+
+.myShoppingCart {
+    height: 30px;
+    width: 30px;
+    margin-left: 610px;
+    margin-top: -32px;
+}
+.addToCart {
+    height:30px;
+    width:95px;
+    background-color: blue;
+    border-radius: 5px;
+    font-size: 10px;
+    padding-top: 10px;
+    color: whitesmoke;
+}
+
+.productImage {
+   height: 150px;
+    width: 170px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.medicine_name {
+    margin-top: -20px;
+    font-size: 15px;
+}
+.price {
+    color: red;
+    display: inline;
+}
+.strikeoutPrice {
+    font-size: 11px;
+}   
+.productName {
+    font-weight: 100;
+    font-size: 11px;
+}
+
+
+.dropdown-toggle .badge {
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  margin-top:-41px;
+  margin-left: 305px;
+}
+.notify{
+    color:white !important;
+    font-size: 1.5em !important;
+    line-height: 0.9em !important;
+
+}
+.cartEmpty {
+    height: 50px;
+    width: 320px;
+}
+.viewShoppingCart {
+    background-color: blue;
+    color: whitesmoke;
+    font-size: 16px;
+}
+hr {
+    width: 1000px;
+}
+.login-fields {
+width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 550px;
+    border-style: inset;
+    border-radius: 10px;
+    box-shadow: 3px 2px lavender;
+}
+.loginSubmitButton {
+width: 35%;
+    margin-right: 540px;
+    border-radius: 10px;
+}
+.logo-icon-index {
+height: 40px;
+    width: 40px;
+}
+.logo-icon-login {
+    height:40px;
+    width:40px;
+    margin-right: 670px;
+}
+.login-text {
+  margin-right: 550px;
+    margin-top: -30px;
+
+}
+.logo-icon-header-index {
+    height:40px;
+    width: 40px;
+    float: left;
+    margin-left: 420px;
+    margin-top: 15px;
+}
+.clearCart {
+    height: 30px;
+    width: 100px;float:right;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 350px;
+  margin-bottom: 30px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {  background-color: lightblue;}
+.dropbtn {
+    width: 150px !important;
+    background-color: blue;
+    /* margin-top: 30px; */
+    color: whitesmoke;
+    margin-top: -50px;
+    margin-right: -850px;
+}
+.autoMargin {
+    height: auto;
+    overflow-y: visible;    
+}
+.brandListHeader {
+     height:auto;
+     width: 200px;
+        border: 1px solid #e4e4e4;
+}
+.brandList {
+   
+     height:350px;
+    width:200px;
+        border: 1px solid #e4e4e4;
+        overflow-y: auto;
+    overflow-x: hidden;
+}
+.brandDiv {
+    display: inline-block;
+    height:40px;
+    width:200px;
+    float: left;
+  
+}
+input[type="checkbox"] {
+    height:40px;
+    width: 20px;
+    float: left;
+    margin-bottom: 10px;
+}
+/* } */
+.addtoCartButton {
+    padding-bottom: 20px;   
+}
+.dropdown-menu notify-drop {
+    float: right !important;
+}
+.dropdown-menu {
+
+    margin-left: 1050px !important;
+}

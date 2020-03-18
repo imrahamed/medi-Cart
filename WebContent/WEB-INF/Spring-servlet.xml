@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+     
+        
+        
+    <context:component-scan base-package="com.spring.controllers" />
+	<context:property-placeholder location="classpath:mysql.properties"/>	
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+ 	</bean>
+	
+	
+	 <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>  
+        <property name="hibernateProperties">  
+            <props>  
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
+                <prop key="hibernate.hbm2ddl.auto">update</prop>  
+                <prop key="hibernate.show_sql">false</prop>  
+                  
+            </props>  
+        </property>  
+        <property name="annotatedClasses">
+        <list>
+        <value>com.spring.DomainClasses.Brand</value>
+        <value>com.spring.DomainClasses.Category</value>
+        <value>com.spring.DomainClasses.Company</value>
+        <value>com.spring.DomainClasses.Medicine</value>
+        <value>com.spring.DomainClasses.OrderLine</value>
+        <value>com.spring.DomainClasses.Orders</value>
+        <value>com.spring.DomainClasses.Role</value>
+        <value>com.spring.DomainClasses.User</value>
+        </list>
+        </property>
+    </bean>  
+
+    <tx:annotation-driven />
+     <bean id="transactionManager" class = "org.springframework.orm.hibernate3.HibernateTransactionManager">
+      <property name="sessionFactory" ref = "sessionFactory"></property>
+      </bean>  
+         <bean id="userService" class="com.spring.Services.UserService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean>   
+         <bean id="companyService" class="com.spring.Services.CompanyService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean> 
+         <bean id="brandService" class="com.spring.Services.BrandService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean>  
+         <bean id="categoryService" class="com.spring.Services.CategoryService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean>   
+         <bean id="medicineService" class="com.spring.Services.MedicineService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean>   
+         <bean id="roleService" class="com.spring.Services.RoleService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean>   
+         <bean id="orderService" class="com.spring.Services.OrderService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean> 
+         <bean id="orderLineService" class="com.spring.Services.OrderLineService">
+         <property name = "sessionFactory" ref = "sessionFactory" />        
+         </bean>  
+</beans>
+
+
+
+
