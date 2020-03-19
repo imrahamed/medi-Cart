@@ -16,7 +16,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structured for table `brand`
+-- Table structure for table `brand`
 --
 
 DROP TABLE IF EXISTS `brand`;
