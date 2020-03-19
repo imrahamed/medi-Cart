@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3306/mart
+db.username=root
+db.password=imran
