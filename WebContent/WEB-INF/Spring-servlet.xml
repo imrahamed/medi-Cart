@@ -10,7 +10,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         
         
     <context:component-scan base-package="com.spring.controllers" />
-	<context:property-placeholder location="classpath:mysql.properties"/>	
+	<!-- <context:property-placeholder location="classpath:mysql.properties"/>	 -->
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -21,9 +21,9 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="${db.url}" />
-		<property name="username" value="${db.username}" />
-		<property name="password" value="${db.password}" />
+		<property name="url" value="jdbc:mysql://localhost:3306/mart" />
+		<property name="username" value="root" />
+		<property name="password" value="imran" />
  	</bean>
 	
 	
